@@ -1,7 +1,5 @@
 # README #
 
-Esta casando de tirar codigo y que tu supevisor te tiene harto con el "Como vamos" , llegaaaa WastTime, solo tiene que ejecutar y pensar que esta corriendo un proceso. Adio expresion de tu jefe" llamar al : 809-Harto Como vamos
-
 ¿Tired  and fucked of the -How we're going- from your Supervisor? Here's **TimeWaster**.
 
 Just exec this and start thinking about your lovely dog or your darkiest girlfriend while ruinning a "hard damn data process".
