@@ -53,11 +53,6 @@ namespace WindowsTimeWaster.Framework.Commands
             }
         }
 
-        public void Register(Action action)
-        {
-            
-        }
-
         public void Stop()
         {
             //Not requiered

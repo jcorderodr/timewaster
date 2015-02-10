@@ -16,13 +16,13 @@ namespace WindowsTimeWaster.Framework.Commands
 
         private const String Help = "Start *required [-s xx | xx milliseconds indicating speed.]";
 
-        private Action _action;
-
         private bool _isRunning;
+
+        private const int DefaultSeconds = 400;
 
         public StartCommand()
         {
-            _messagesRepository = new MessagesRepository(); 
+            _messagesRepository = new MessagesRepository();
         }
 
         public string ActionKey { get { return Key; } }
@@ -48,33 +48,27 @@ namespace WindowsTimeWaster.Framework.Commands
             try
             {
                 var time = 0;
-                if (int.TryParse(argument[pos + 1], out time))
+                if (!int.TryParse(argument[pos + 1], out time))
                 {
-                    _isRunning = true;
-                    Task.Run(() =>
+                    TwConsole.WriteError("Argument of the type '-s xx' it's not valid. Using default value.");
+                }
+
+                time = DefaultSeconds;
+                _isRunning = true;
+                Task.Run(() =>
+                {
+                    while (_isRunning)
                     {
-                        while (_isRunning)
-                        {
-                            TwConsole.WriteLine(_messagesRepository.ShowMessages());
-                            Task.Delay(TimeSpan.FromMilliseconds(time)).Wait();
-                        }
-                    }); 
-                }
-                else
-                {
-                    TwConsole.WriteError("Argument of the type '-s xx' it's not valid.");
-                }
+                        TwConsole.WriteLine(_messagesRepository.ShowMessages());
+                        Task.Delay(TimeSpan.FromMilliseconds(time)).Wait();
+                    }
+                });
             }
             catch (Exception)
             {
                 throw new TwArgumentNotValidException("Time Interval not in valid format.");
             }
-            
-        }
 
-        public void Register(Action action)
-        {
-            _action = action;
         }
 
         public void Stop()

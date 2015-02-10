@@ -23,12 +23,6 @@ namespace WindowsTimeWaster.Framework.Commands
         /// <param name="parameter"></param>
         void Exec(object parameter = null);
 
-        /// <summary>
-        /// Register an action to execute.
-        /// </summary>
-        /// <param name="action"></param>
-        void Register(Action action);
-
         void Stop();
 
     }

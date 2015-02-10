@@ -49,11 +49,6 @@ namespace WindowsTimeWaster.Framework
             }
         }
 
-        private ITwCommand RequestCommand()
-        {
-            return null;
-        }
-
         public void StopProcess()
         {
             foreach (var cmd in _commands)

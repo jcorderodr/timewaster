@@ -13,8 +13,6 @@ namespace WindowsTimeWaster.Framework.Commands
 
         private const String Help = "Shows an User Interface";
 
-        private Action _action;
-
         private readonly FrmWaiter _form;
 
         public UserInterfaceCommand()
@@ -29,11 +27,6 @@ namespace WindowsTimeWaster.Framework.Commands
         public KeyValuePair<string, string> ActionShortcut
         {
             get {return new KeyValuePair<string, string>(ActionKey, Help);}
-        }
-        
-        public void Register(Action action)
-        {
-            _action = action;
         }
         
         public void Exec(object parameter)

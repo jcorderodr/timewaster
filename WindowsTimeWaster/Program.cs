@@ -99,7 +99,7 @@ namespace WindowsTimeWaster
             return 1;
         }
 
-        public const String VERSION = "0.9.0";
+        public const String VERSION = "0.9.1";
 
     }
 }
