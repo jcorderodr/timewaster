@@ -1,0 +1,24 @@
+Importando archivos de capa exterma
+Cargando archivos de sistema integrado
+Buscando fuentes de archivos incrustados
+Descargando en el sistema archivos obsoletos
+Buscando instrucciones de descarga
+Truncando resultados no compatibles
+Iniciando muestreo de descarga
+Ocultando mascarilla de acceso a datos
+Extrayendo archivos desde servidor
+Importando archivo comprimido
+Extrayendo recursos comprimidos externos
+Buscando matriz de cambios
+Adquiriendo permisos de acceso
+Adquiriendo logística de captura de datos
+Disponiendo de recursos obsoletos
+Disponiendo de recursos no necesarios
+Construyendo gráfica de cambios
+Construyendo matriz de archivos
+Contruyendo parámetros de búsqueda
+Estructurando archivos obtenidos desde el servidor
+Estructurando arquitectura de archivos
+Determinando tamaño de descarga
+Determinando esquema de archivos
+Creando replica de archivos a cargar
