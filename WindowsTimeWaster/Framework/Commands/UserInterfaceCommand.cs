@@ -9,7 +9,7 @@ namespace WindowsTimeWaster.Framework.Commands
     class UserInterfaceCommand : ITwCommand
     {
 
-        public const String Key = "-u";
+        public const String KEY = "-u";
 
         private const String Help = "Shows an User Interface";
 
@@ -20,7 +20,7 @@ namespace WindowsTimeWaster.Framework.Commands
             _form = new FrmWaiter();
         }
 
-        public string ActionKey { get { return Key; } }
+        public string ActionKey { get { return KEY; } }
 
         public string Description { get; private set; }
 

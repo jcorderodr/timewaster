@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using WindowsTimeWaster.UI;
 
 namespace WindowsTimeWaster.Framework.Commands
 {
@@ -12,9 +9,9 @@ namespace WindowsTimeWaster.Framework.Commands
 
         private readonly MessagesRepository _messagesRepository;
 
-        public const String Key = "-s";
+        public const String KEY = "-s";
 
-        private const String Help = "Start *required [-s xx | xx milliseconds indicating speed.]";
+        private const String Help = "Start *required [-s xx | xx milliseconds indicating speed]";
 
         private bool _isRunning;
 
@@ -25,7 +22,7 @@ namespace WindowsTimeWaster.Framework.Commands
             _messagesRepository = new MessagesRepository();
         }
 
-        public string ActionKey { get { return Key; } }
+        public string ActionKey { get { return KEY; } }
 
         public KeyValuePair<string, string> ActionShortcut
         {

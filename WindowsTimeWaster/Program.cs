@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsTimeWaster.Framework;
 using WindowsTimeWaster.Properties;
@@ -37,7 +33,8 @@ namespace WindowsTimeWaster
             while (_keepIt)
             {
                 DisplayMenu();
-                ScanInput(ref _keepIt);
+                var @out = ScanInput(ref _keepIt);
+                if (@out == 0) break;
                 _worker.DoWork().Wait();
             }
             TwConsole.Read();
@@ -68,6 +65,7 @@ namespace WindowsTimeWaster
             {
                 TwConsole.WriteLine("   {0} {1} ", option.Key, option.Value);
             }
+            TwConsole.WriteLine("   {0} {1} ", CommandManager.EXIT_KEY, "Exit");
             TwConsole.WriteLine();
             TwConsole.Write("\t-> ");
         }

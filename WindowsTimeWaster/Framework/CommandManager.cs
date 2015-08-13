@@ -35,7 +35,7 @@ namespace WindowsTimeWaster.Framework
 
         public void Process(string[] args)
         {
-            if (!args.Contains(StartCommand.Key))
+            if (!args.Contains(StartCommand.KEY))
             {
                 TwConsole.WriteError("Principal action wasn't found in the arguments.");
                 return;
